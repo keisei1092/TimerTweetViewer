@@ -111,7 +111,7 @@ final class ViewController: UIViewController {
     }
 
     private func getTimeline() {
-        let url = URL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json?count=20")
+        let url = URL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json?count=100")
         guard let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, url: url, parameters: nil) else {
             return
         }
