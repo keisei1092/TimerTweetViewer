@@ -50,7 +50,6 @@ final class ViewController: UIViewController {
             return
         }
 
-        tweetContentLabel?.text = "" // erase previous
         tweetContentLabel?.text = tweets[count].text
         print(tweets[count])
         count += 1
