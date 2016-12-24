@@ -25,7 +25,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6K-8J-6zi">
                                 <rect key="frame" x="37.5" y="167" width="300" height="333.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,7 +44,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="34f-2W-leO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
