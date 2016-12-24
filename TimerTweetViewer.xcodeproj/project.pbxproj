@@ -14,7 +14,6 @@
 		F3BE667E1E0EBE570043CF36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BE667C1E0EBE570043CF36 /* LaunchScreen.storyboard */; };
 		F3BE66891E0EBE570043CF36 /* TimerTweetViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE66881E0EBE570043CF36 /* TimerTweetViewerTests.swift */; };
 		F3BE66941E0EBE570043CF36 /* TimerTweetViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE66931E0EBE570043CF36 /* TimerTweetViewerUITests.swift */; };
-		F3BE66A31E0EC9690043CF36 /* NSTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE66A21E0EC9690043CF36 /* NSTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		F3BE668F1E0EBE570043CF36 /* TimerTweetViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTweetViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BE66931E0EBE570043CF36 /* TimerTweetViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTweetViewerUITests.swift; sourceTree = "<group>"; };
 		F3BE66951E0EBE570043CF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3BE66A21E0EC9690043CF36 /* NSTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 		F3BE66721E0EBE570043CF36 /* TimerTweetViewer */ = {
 			isa = PBXGroup;
 			children = (
-				F3BE66A11E0EC95C0043CF36 /* extensions */,
 				F3BE66731E0EBE570043CF36 /* AppDelegate.swift */,
 				F3BE66751E0EBE570043CF36 /* ViewController.swift */,
 				F3BE66771E0EBE570043CF36 /* Main.storyboard */,
@@ -126,14 +123,6 @@
 				F3BE66951E0EBE570043CF36 /* Info.plist */,
 			);
 			path = TimerTweetViewerUITests;
-			sourceTree = "<group>";
-		};
-		F3BE66A11E0EC95C0043CF36 /* extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F3BE66A21E0EC9690043CF36 /* NSTimer.swift */,
-			);
-			name = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3BE66761E0EBE570043CF36 /* ViewController.swift in Sources */,
-				F3BE66A31E0EC9690043CF36 /* NSTimer.swift in Sources */,
 				F3BE66741E0EBE570043CF36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +514,7 @@
 				F3BE669A1E0EBE570043CF36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3BE669B1E0EBE570043CF36 /* Build configuration list for PBXNativeTarget "TimerTweetViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +523,7 @@
 				F3BE669D1E0EBE570043CF36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3BE669E1E0EBE570043CF36 /* Build configuration list for PBXNativeTarget "TimerTweetViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +532,7 @@
 				F3BE66A01E0EBE570043CF36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
