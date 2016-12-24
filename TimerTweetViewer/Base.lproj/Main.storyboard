@@ -37,6 +37,9 @@
                             <constraint firstItem="N6K-8J-6zi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="eG2-2m-uPX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tweetContentLabel" destination="N6K-8J-6zi" id="L0x-ab-jam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

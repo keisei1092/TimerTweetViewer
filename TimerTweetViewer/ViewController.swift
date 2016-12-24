@@ -15,6 +15,8 @@ final class ViewController: UIViewController {
     var accountStore: ACAccountStore = ACAccountStore()
     var twitterAccount: ACAccount?
 
+    @IBOutlet weak var tweetContentLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
