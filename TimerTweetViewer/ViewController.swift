@@ -52,7 +52,13 @@ final class ViewController: UIViewController {
 
         ImageLoader.shared.image(urlString: tweets[count].user.profileImageURLHTTPS, completionHandler: { image in
             self.tweetContentLabel?.text = self.tweets[self.count].text
+
             self.userIconImageView.image = image
+            self.userIconImageView.layer.cornerRadius = 32.0
+            self.userIconImageView.layer.masksToBounds = true
+            self.userIconImageView.layer.borderWidth = 1.0
+            self.userIconImageView.layer.borderColor = UIColor(red: 235, green: 235, blue: 241, alpha: 1).cgColor
+
             print(self.tweets[self.count])
             self.count += 1
         })
