@@ -49,6 +49,7 @@ final class ViewController: UIViewController {
     func displayTweet(_ timer: Timer) {
         print("displayTweet(\(count))")
         guard count < tweets.count else {
+            exit(0)
             return
         }
 
