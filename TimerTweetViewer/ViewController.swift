@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
 
     var accountStore: ACAccountStore = ACAccountStore()
     var twitterAccount: ACAccount?
-    var tweets: [String] = []
+    var tweets: [Tweet] = []
     var count = 0
     var timer: Timer?
 
@@ -42,7 +42,8 @@ final class ViewController: UIViewController {
             return
         }
 
-        tweetContentLabel?.text = tweets[count]
+        tweetContentLabel?.text = "" // erase previous
+        tweetContentLabel?.text = tweets[count].text
         print(tweets[count])
         count += 1
     }
@@ -104,7 +105,19 @@ final class ViewController: UIViewController {
                     }
                     let result = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
                     for tweet in result as! [AnyObject] { // errorsが返ってくることがある
-                        self.tweets.append(tweet["text"] as! String)
+                        guard let text = tweet["text"] as? String, let createdAt = tweet["created_at"] as? String else {
+                            print("failed to map tweet string from JSON")
+                            return
+                        }
+
+                        let user = tweet["user"] as? [String: Any]
+                        guard let userName = user?["name"] as? String, let userScreenName = user?["screen_name"] as? String, let userProfileImageURLHTTPS = user?["profile_image_url_https"] as? String else {
+                            print("failed to map user string from JSON")
+                            return
+                        }
+
+                        let tweetObject = Tweet(text: text, createdAt: createdAt, user: User(name: userName, screenName: userScreenName, profileImageURLHTTPS: userProfileImageURLHTTPS))
+                        self.tweets.append(tweetObject)
                     }
                     self.timer!.fire() // I think this force unwrap is safe
                 }  catch let error as NSError {
