@@ -14,11 +14,16 @@ final class ViewController: UIViewController {
 
     var accountStore: ACAccountStore = ACAccountStore()
     var twitterAccount: ACAccount?
+    var tweets: [String] = []
+    var count = 0
+    var timer: Timer?
 
     @IBOutlet weak var tweetContentLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.displayTweet(_:)), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view, typically from a nib.
         getAccounts { (accounts: [ACAccount]) -> Void in
@@ -29,6 +34,17 @@ final class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func displayTweet(_ timer: Timer) {
+        print("displayTweet()")
+        guard count < tweets.count else {
+            return
+        }
+
+        tweetContentLabel?.text = tweets[count]
+        print(tweets[count])
+        count += 1
     }
 
     func getAccounts(callback: @escaping ([ACAccount]) -> Void) { // 循環参照になってないかあとで見る
@@ -88,8 +104,10 @@ final class ViewController: UIViewController {
                     }
                     let result = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
                     for tweet in result as! [AnyObject] { // errorsが返ってくることがある
+                        self.tweets.append(tweet["text"] as! String)
                         print(tweet["text"] as! String)
                     }
+                    self.timer!.fire() // I think this force unwrap is safe
                 }  catch let error as NSError {
                     print(error)
                 }
