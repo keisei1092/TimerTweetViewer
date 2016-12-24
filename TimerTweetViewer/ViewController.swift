@@ -85,7 +85,7 @@ final class ViewController: UIViewController {
                         return
                     }
                     let result = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
-                    for tweet in result as! [AnyObject] { // errorsが返ってくることがあるぞ
+                    for tweet in result as! [AnyObject] { // errorsが返ってくることがある
                         print(tweet["text"] as! String)
                     }
                 }  catch let error as NSError {
