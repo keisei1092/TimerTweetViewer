@@ -62,7 +62,7 @@ final class ViewController: UIViewController {
             self.userIconImageView.layer.borderColor = UIColor(red: 235, green: 235, blue: 241, alpha: 1).cgColor
 
             self.userNameLabel?.text = self.tweets[self.count].user.name
-            self.userScreenNameLabel?.text = self.tweets[self.count].user.screenName
+            self.userScreenNameLabel?.text = "@\(self.tweets[self.count].user.screenName)"
 
             print(self.tweets[self.count])
             self.count += 1
