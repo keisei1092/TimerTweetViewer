@@ -6,8 +6,16 @@
 //  Copyright © 2016 keisei_1092. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Tweet: NSObject {
+struct Tweet {
+    let text: String
+    let createdAt: String
+    let user: User
+}
 
+struct User {
+    let name: String
+    let screenName: String
+    let profileImageURLHTTPS: String
 }
