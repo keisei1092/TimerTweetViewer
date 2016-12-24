@@ -40,9 +40,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chB-Q4-BJd">
-                                        <rect key="frame" x="71" y="93.5" width="200" height="21"/>
+                                        <rect key="frame" x="21" y="93.5" width="250" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="34f-2W-leO"/>
+                                            <constraint firstAttribute="width" constant="250" id="34f-2W-leO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
