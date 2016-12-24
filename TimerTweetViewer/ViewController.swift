@@ -23,7 +23,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.displayTweet(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.displayTweet(_:)), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view, typically from a nib.
         getAccounts { (accounts: [ACAccount]) -> Void in
