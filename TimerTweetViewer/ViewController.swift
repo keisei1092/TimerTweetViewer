@@ -5,6 +5,13 @@
 //  Created by Keisei Saito on 2016/12/24.
 //  Copyright © 2016 keisei_1092. All rights reserved.
 //
+//  参考にしたもの
+//  http://t-higashi.com/twitter-api-one
+//  http://qiita.com/kwst/items/2ca7937a67a4f8ff59cb
+//  https://gist.github.com/SatoshiKawabata/c73542cb164d0abfe2a1
+//  http://qiita.com/nnsnodnb/items/d85235bca74f58c71b3f
+//  http://qiita.com/teradonburi/items/f196b58d51372f7a3aab
+//
 
 import UIKit
 import Accounts
