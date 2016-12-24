@@ -127,7 +127,7 @@ final class ViewController: UIViewController {
                         let tweetObject = Tweet(text: text, createdAt: createdAt, user: User(name: userName, screenName: userScreenName, profileImageURLHTTPS: userProfileImageURLHTTPS))
                         self.tweets.append(tweetObject)
                     }
-                    self.timer!.fire() // I think this force unwrap is safe
+                    self.timer!.fire() // I think this force unwrap is safe... :[
                 }  catch let error as NSError {
                     print(error)
                 }
