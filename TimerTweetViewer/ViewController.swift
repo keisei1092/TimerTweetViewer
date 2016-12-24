@@ -50,9 +50,12 @@ final class ViewController: UIViewController {
             return
         }
 
-        tweetContentLabel?.text = tweets[count].text
-        print(tweets[count])
-        count += 1
+        ImageLoader.shared.image(urlString: tweets[count].user.profileImageURLHTTPS, completionHandler: { image in
+            self.tweetContentLabel?.text = self.tweets[self.count].text
+            self.userIconImageView.image = image
+            print(self.tweets[self.count])
+            self.count += 1
+        })
     }
 
     func getAccounts(callback: @escaping ([ACAccount]) -> Void) { // 循環参照になってないかあとで見る
