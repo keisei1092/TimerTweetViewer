@@ -58,7 +58,7 @@ final class ViewController: UIViewController {
             self.userIconImageView.image = image
             self.userIconImageView.layer.cornerRadius = 32.0
             self.userIconImageView.layer.masksToBounds = true
-            self.userIconImageView.layer.borderWidth = 1.0
+            self.userIconImageView.layer.borderWidth = 0.5
             self.userIconImageView.layer.borderColor = UIColor(red: 235, green: 235, blue: 241, alpha: 1).cgColor
 
             self.userNameLabel?.text = self.tweets[self.count].user.name
