@@ -27,6 +27,8 @@ final class ViewController: UIViewController {
 
     @IBOutlet weak var tweetContentLabel: UILabel!
     @IBOutlet weak var userIconImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userScreenNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
