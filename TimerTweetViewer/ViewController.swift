@@ -105,7 +105,6 @@ final class ViewController: UIViewController {
                     let result = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
                     for tweet in result as! [AnyObject] { // errorsが返ってくることがある
                         self.tweets.append(tweet["text"] as! String)
-                        print(tweet["text"] as! String)
                     }
                     self.timer!.fire() // I think this force unwrap is safe
                 }  catch let error as NSError {
