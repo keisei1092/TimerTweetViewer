@@ -19,6 +19,7 @@ final class ViewController: UIViewController {
     var timer: Timer?
 
     @IBOutlet weak var tweetContentLabel: UILabel!
+    @IBOutlet weak var userIconImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

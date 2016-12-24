@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,17 +29,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YEF-F5-saP">
+                                <rect key="frame" x="287" y="581" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2h3-pJ-2Wa"/>
+                                    <constraint firstAttribute="width" constant="64" id="B1F-Yv-Zcj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YEF-F5-saP" secondAttribute="trailing" constant="8" id="01A-jE-aCA"/>
                             <constraint firstItem="N6K-8J-6zi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="72J-cG-eEk"/>
                             <constraint firstItem="N6K-8J-6zi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FEI-iD-eZ1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YEF-F5-saP" secondAttribute="bottom" constant="22" id="dKO-T7-EKX"/>
                             <constraint firstItem="N6K-8J-6zi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKs-aB-cuV"/>
                             <constraint firstItem="N6K-8J-6zi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="eG2-2m-uPX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tweetContentLabel" destination="N6K-8J-6zi" id="L0x-ab-jam"/>
+                        <outlet property="userIconImageView" destination="YEF-F5-saP" id="Abl-5K-3fH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
