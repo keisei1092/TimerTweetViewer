@@ -47,7 +47,7 @@ final class ViewController: UIViewController {
     }
 
     func displayTweet(_ timer: Timer) {
-        print("displayTweet()")
+        print("displayTweet() count: \(count)")
         guard count < tweets.count else {
             return
         }
@@ -64,7 +64,7 @@ final class ViewController: UIViewController {
             self.userNameLabel?.text = self.tweets[self.count].user.name
             self.userScreenNameLabel?.text = "@\(self.tweets[self.count].user.screenName)"
 
-            print(self.tweets[self.count])
+            print("--- \(self.tweets[self.count].verbose)")
             self.count += 1
         })
     }

@@ -12,6 +12,12 @@ struct Tweet {
     let text: String
     let createdAt: String
     let user: User
+
+    var verbose: String {
+        get {
+            return "\(text) by @\(user.screenName)"
+        }
+    }
 }
 
 struct User {
