@@ -1,6 +1,6 @@
 # TimerTweetViewer
 
-an Twitter client in iOS.
+a Twitter client in iOS.
 
 ## Feature
 
