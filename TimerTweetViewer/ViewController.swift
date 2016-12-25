@@ -65,7 +65,7 @@ final class ViewController: UIViewController {
             self.userNameLabel?.text = self.tweets[self.count].user.name
             self.userScreenNameLabel?.text = "@\(self.tweets[self.count].user.screenName)"
 
-            print("--- \(self.tweets[self.count].verbose)")
+            print("--- \(self.tweets[self.count].dump)")
             self.count += 1
         })
     }
